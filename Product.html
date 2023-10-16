@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header class="bg-black h-14 relative flex items-center justify-center">
+        <nav class="flex w-full justify-between absolute items-center">
+            <div class="flex items-center">
+                <img src="./img/Frame 13.png" alt="" class="mx-6">
+                <div class="hidden md:block">
+                    <ul class="text-white flex items-center gap-20 pl-20">
+                        <li class="text-[80%]">
+                            <a href="#home" class="hover:text-gray-400">Home</a>
+                        </li>
+                        <li class="text-[80%]">
+                            <a href="#product" class="hover:text-gray-400">Product</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <a href="#search" class="hidden md:block">
+                    <ion-icon name="search-outline" class="text-white mx-4 text-[120%]"></ion-icon>
+                </a>
+                <a href="#cart">
+                    <ion-icon name="cart-outline" class="text-white mx-4 text-[120%]"></ion-icon>
+                </a>
+                <a href="#sign" class="hidden md:block">
+                    <button class="text-white border-[1px] text-[70%] px-3 py-1 rounded mx-4 hover:opacity-70">Sign in</button>
+                </a>
+                <a href="#signUp" class="hidden md:block">
+                    <button class="bg-[#FF8906] border-[#FF8906] border-[1px] text-[70%] px-3 py-1 rounded mx-4 hover:bg-orange-500 hover:border-orange-500 hover:text-white">Sign up</button>
+                </a>
+                <a href="#humberger" class="md:hidden">
+                    <ion-icon name="menu" onclick="onToggleMenu(this)" class="text-white mx-5 text-3xl"></ion-icon>
+                </a>
+            </div>
+        </nav>
+        <nav class="nav-links duration-500 bg-white border-[1px] shadow-sm rounded w-[90%] h-auto flex justify-center mt-5 absolute top-[-400%]">
+            <div class="flex flex-col items-center w-full my-2">
+                <button class="border-[1px] w-[90%] my-1 py-1 rounded hover:bg-black hover:text-white hover:border-black duration-300 shadow-sm">Sign in</button>
+                <button class="border-[1px] w-[90%] my-1 py-1 rounded bg-white hover:bg-black hover:text-white duration-300 shadow-sm">Sign up</button>
+                <a href="#home" class="border-[1px] w-[90%] my-1 py-1 rounded hover:bg-black hover:text-white duration-300 flex justify-center shadow-sm">Home</a>
+                <a href="#product" class="border-[1px] w-[90%] my-1 py-1 rounded hover:bg-black hover:text-white duration-300 flex justify-center shadow-sm">Product</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <section id="product"></section>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? ('close') : ('menu')
+            navLinks.classList.toggle('top-[100%]')
+        }
+    </script>
+</body>
+</html>

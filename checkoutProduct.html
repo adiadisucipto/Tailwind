@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Product</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF8906'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="">
+    <header class="">
+        <div class="flex justify-between items-center px-8 py-3 bg-black">
+            <div>
+                <img src="./img/Checkout Product/Frame 12.svg" alt="">
+            </div>
+            <div class="text-white flex gap-5 justify-between lg:w-[85%] items-center flex-row">
+                <div class="hidden lg:flex gap-10">
+                    <a href="">Dashboard</a>
+                    <a href="">Product</a>
+                    <a href="">Order</a>
+                </div>
+                <div class="flex flex-row justify-center items-center gap-3 lg:gap-5">
+                    <a href="#search" class="hidden lg:block">
+                        <ion-icon name="search-outline" class="text-2xl"></ion-icon>
+                    </a>
+                    <a href="#cart" class="">
+                        <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+                    </a>
+                    <div>
+                        <img src="./img/Checkout Product/cat.jpg" alt="" class="w-10 h-10 object-cover rounded-full hidden lg:block">
+                    </div>
+                    <a href="#logout">
+                        <ion-icon name="chevron-down" onclick="dropDown(this)" class="hidden lg:block"></ion-icon>
+                    </a>
+                    <a href="#menu" class="lg:hidden">
+                        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-2xl"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" onclick="logout" class="showModal drop-links float-right text-2xl bg-slate-300 hidden  justify-center items-center px-5 py-5 mx-8 my-5 rounded hover:opacity-70">
+            <ion-icon name="log-out"></ion-icon>
+            <h1 class="px-2">Logout</h1>
+        </a>
+
+        <!-- Modal -->
+        <div onclick="modal(this)" class="logout-links modal absolute hidden w-full h-[200%] justify-center z-[100] bg-slate-400 bg-opacity-70">
+            <div class="bg-slate-500 w-[30%] rounded h-[8%] mt-[20%]">
+                <h1 class="text-slate-200 text-xl flex justify-center">Are you sure?</h1>
+                <div class="flex gap-2 justify-center mx-5 py-5">
+                    <a href="#" class="bg-slate-300 w-20 text-center rounded">Yes</a>
+                    <a href="#" class="bg-primary w-10 text-center rounded close-modal">No</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-links hidden">
+            <div class="bg-slate-300 flex flex-col items-center mx-5 my-2 rounded">
+                <div class="bg-gray-600 flex flex-col justify-center items-center w-[50%] rounded shadow-lg my-3">
+                    <img src="./img/Checkout Product/cat.jpg" alt="" class="shadow-lg mt-3 w-32 h-32 object-cover rounded-full">
+                    <h1 class="text-gray-300 text-xl">Adi Sucipto</h1>
+                    <h1 class="text-gray-300 text-xs">suciptoadi550@gmail.com</h1>
+                    <a href="#" class="bg-slate-700 text-white my-2 px-5 py-2 rounded shadow-lg hover:opacity-80">Logout</a>
+                </div>
+                <div class="bg-white w-[90%] rounded flex flex-row justify-between items-center shadow-lg">
+                    <ion-icon name="search-outline" class="text-black w-[8%]"></ion-icon>
+                    <input type="text" placeholder="Search Anything" class="w-[92%] py-1 rounded px-2">
+                </div>
+                <div class="flex flex-col justify-center items-center my-4 w-[90%]">
+                    <a href="#dashboard" class="bg-gray-400 w-full flex justify-center py-2 rounded my-1 font-semibold hover:opacity-80 text-slate-800">Dashboard</a>
+                    <a href="#product" class="bg-gray-400 w-full flex justify-center py-2 rounded my-1 font-semibold hover:opacity-80 text-slate-800">Product</a>
+                    <a href="#product" class="bg-gray-400 w-full flex justify-center py-2 rounded my-1 font-semibold hover:opacity-80 text-slate-800">Order</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="">
+        <h1 class="mx-8 my-5 font-semibold lg:text-3xl lg:my-10">Payment Details</h1>
+        <div class="flex lg:flex-row justify-between items-center mx-8 gap-3">
+            <div class="flex justify-between items-center lg:w-[59.5%] w-[100%]">
+                <h1>Your Order</h1>
+                <button class="flex gap-2 px-2 justify-center items-center bg-primary py-2 rounded">
+                    <ion-icon name="add-outline"></ion-icon>
+                    <h1>Add Menu</h1>
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-3 mx-8">
+            <div class="lg:w-[60%]">
+                <div class="my-5 flex items-center w-full bg-red-50 rounded">
+                    <div class="w-[24%] m-2">
+                        <img src="./img/Checkout Product/image 31.webp" alt="">
+                    </div>
+                    <div class="flex justify-between lg:items-center w-[76%] h-full">
+                        <div class="mx-3 flex flex-col justify-evenly gap-4">
+                            <h1 class="bg-[#D00000] w-[39%] flex justify-center text-white text-[12px] rounded-full mt-2">FLASH SALE!</h1>
+                            <h1 class="font-semibold text-[17px]">Hazelnut Latte</h1>
+                            <h1 class="text-[17px] tracking-wider">2pcs | Regular | Ice | Dine In</h1>
+                            <div class="flex">
+                                <h1 class="line-through text-[#D00000] text-xs mt-[4px]">IDR40.000</h1>
+                                <h1 class="text-xl text-[#FF8906]">IDR20.000</h1>
+                            </div>
+                        </div>
+                        <div class="lg:mx-6 m-2">
+                            <ion-icon name="close-circle-outline" class="text-[#D00000] font-semibold text-2xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-5 flex items-center w-full bg-red-50 rounded">
+                    <div class="w-[24%] m-2">
+                        <img src="./img/Checkout Product/image 31.webp" alt="">
+                    </div>
+                    <div class="flex justify-between lg:items-center w-[76%] h-full">
+                        <div class="mx-3 flex flex-col justify-evenly gap-4">
+                            <h1 class="bg-[#D00000] w-[39%] flex justify-center text-white text-[12px] rounded-full">FLASH SALE!</h1>
+                            <h1 class="font-semibold text-[17px]">Hazelnut Latte</h1>
+                            <h1 class="text-[17px] tracking-wider">2pcs | Regular | Ice | Dine In</h1>
+                            <div class="flex">
+                                <h1 class="line-through text-[#D00000] text-xs mt-[4px]">IDR40.000</h1>
+                                <h1 class="text-xl text-[#FF8906]">IDR20.000</h1>
+                            </div>
+                        </div>
+                        <div class="lg:mx-6 m-2">
+                            <ion-icon name="close-circle-outline" class="text-[#D00000] font-semibold text-2xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-xl my-5">Payment Info & Delivery</h1>
+                    
+                    <h1 class="my-1 font-semibold">Email</h1>
+                    <div class="bg-white border-[1px] rounded flex flex-row justify-between items-center w-full my-1">
+                        <ion-icon name="mail-outline" class="text-black w-[5%]"></ion-icon>
+                        <input type="text" placeholder="Enter Your Email" class="w-[95%] py-1 rounded">
+                    </div>
+
+                    <h1 class="mt-5 font-semibold">Full Name</h1>
+                    <div class="bg-white border-[1px] rounded flex flex-row justify-between items-center w-full mt-1">
+                        <ion-icon name="person-outline" class="text-black w-[5%]"></ion-icon>
+                        <input type="text" placeholder="Enter Your Full Name" class="w-[95%] py-1 rounded">
+                    </div>
+
+                    <h1 class="mt-5 font-semibold">Address</h1>
+                    <div class="bg-white border-[1px] rounded flex flex-row justify-between items-center w-full mt-1">
+                        <ion-icon name="location-outline" class="text-black w-[5%]"></ion-icon>
+                        <input type="text" placeholder="Enter Your Address" class="w-[95%] py-1 rounded">
+                    </div>
+
+                    <h1 class="mt-5 font-semibold">Delivery</h1>
+                    <div class="mt-2 flex justify-between">
+                        <button class="border-[1px] border-primary w-[32%] rounded py-1">Dine in</button>
+                        <button class="border-[1px] w-[32%] rounded py-1">Door Delivery</button>
+                        <button class="border-[1px] w-[32%] rounded py-1">Pick Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-[40%] lg:-my-10 my-5">
+                <h1 class="mt-2">Total</h1>
+                <div class="bg-red-50 w-full mt-7 rounded">
+                    <div class="mx-3 pt-10 flex flex-col gap-4">
+                        <div class="flex justify-between">
+                            <h1 class="font-semibold text-gray-500">Order</h1>
+                            <h1 class="font-semibold">Idr.40.000</h1>
+                        </div>
+                        <div class="flex justify-between">
+                            <h1 class="font-semibold text-gray-500">Delivery</h1>
+                            <h1 class="font-semibold">Idr.0</h1>
+                        </div>
+                        <div class="flex justify-between border-b-2 mb-2">
+                            <h1 class="mb-4 font-semibold text-gray-500">Tax</h1>
+                            <h1 class="font-semibold">Idr.4000</h1>
+                        </div>
+                        <div class="flex justify-between mb-5">
+                            <h1 class="font-semibold text-gray-500">Sub Total</h1>
+                            <h1 class="font-semibold">Idr.44.000</h1>
+                        </div>
+                        <button class="w-full bg-primary py-2 font-semibold rounded">Checkout</button>
+                        <h1 class="text-gray-500 font-semibold">We Accept</h1>
+                        <div class="flex justify-between my-2">
+                            <img src="./img/Checkout Product/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.svg" alt="">
+                            <img src="./img/Checkout Product/Logo DANA (PNG-240p) - FileVector69 1.svg" alt="">
+                            <img src="./img/Checkout Product/Bank BCA Logo (SVG-240p) - FileVector69 1.svg" alt="">
+                            <img src="./img/Checkout Product/Vector.svg" alt="">
+                            <img src="./img/Checkout Product/logos_paypal.svg" alt="">
+                        </div>
+                        <h1 class="text-gray-500 font-semibold mb-20">*Get Discount id you pay with Bank Central Asia</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-red-50 lg:mt-10">
+        <div class="pb-10 lg:flex w-[100%] lg:w-[90%]">
+            <div class="mx-8 lg:mx-0 lg:ml-8 lg:mt-20 pt-10 lg:pt-0 mb-10 lg:w-[30%]">
+                <img src="./img/Checkout Product/Frame 27.svg" alt="" class="">
+                <p class="mt-6 text-gray-500 font-semibold w-[90%]">
+                    Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans
+                </p>
+            </div>
+            <div class="mx-8 lg:mx-0 flex w-[80%] lg:w-[40%] lg:justify-between lg:mt-10">
+                <div class="">
+                    <div class="mb-5">
+                        <h1 class="font-semibold">Product</h1>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <a href="#" class="text-gray-500">Our Product</a>
+                        <a href="#" class="text-gray-500">Pricing</a>
+                        <a href="#" class="text-gray-500">Locations</a>
+                        <a href="#" class="text-gray-500">Countries</a>
+                        <a href="#" class="text-gray-500">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-5">
+                        <h1 class="font-semibold">Engage</h1>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <a href="#" class="text-gray-500">Partner</a>
+                        <a href="#" class="text-gray-500">FAQ</a>
+                        <a href="#" class="text-gray-500">About US</a>
+                        <a href="#" class="text-gray-500">Privacy Policy</a>
+                        <a href="#" class="text-gray-500">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-8 lg:mx-0 mt-10 lg:w[30%] lg:ml-10">
+                <div class="my-5 lg:my-0 lg:mb-5">
+                    <h1 class="font-semibold">Social Media</h1>
+                </div>
+                <div class="flex gap-5">
+                    <img src="./img/Checkout Product/Facebook.svg" alt="" class="">
+                    <img src="./img/Checkout Product/Twitter.svg" alt="">
+                    <img src="./img/Checkout Product/Instagram.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="mx-8 mt-10 text-gray-400 text-xl font-semibold">&#169;2020CoffeeStore</h1>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        const dropLinks = document.querySelector('.drop-links')
+        const showModal = document.querySelector('.showModal')
+        const logout = document.querySelector('.modal')
+        const logoutLinks = document.querySelector('.logout-links')
+        const closeModal = document.querySelector('.close-modal')
+
+        showModal.addEventListener('click', function(){
+            logoutLinks.classList.remove('hidden')
+            logoutLinks.classList.add("flex")
+        })
+
+        closeModal.addEventListener('click', function(){
+            logoutLinks.classList.add('hidden')
+        })
+        
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('hidden')
+        }
+        
+        function dropDown(e){
+            e.name = e.name === 'chevron-down' ? 'chevron-up' : 'chevron-down'
+            dropLinks.classList.toggle('lg:flex')
+        }
+    </script>
+</body>
+</html>

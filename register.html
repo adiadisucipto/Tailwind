@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF8906'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <div class="flex">
+            <div class="lg:w-[25%] w-0">
+                <img src="./img/Register/Rectangle 289.webp" alt="" class="w-full h-[100%] object-cover">
+            </div>
+            <div class="lg:w-[75%] w-full">
+                <img src="./img/Register/Frame 12.svg" alt="" class="px-5 pt-10 lg:px-12">
+                <h1 class="font-semibold text-[#8E6447] text-xl px-5 pt-4 lg:px-12">Register</h1>
+                <h2 class="px-5 pt-4 text-[14px] lg:px-12">Fill out the form correctly</h2>
+
+                <h3 class="font-semibold px-5 pt-3 lg:px-12">Full Name</h3>
+                <div class="flex mx-5 my-3 border-[1px] rounded lg:mx-12">
+                    <div class="w-[7%] flex justify-center">
+                        <img src="./img/Register/Profile.svg" alt="" class="w-5 pl-2">
+                    </div>
+                    <input type="text" class="w-[93%] py-1 pl-2" placeholder="Enter Your Full Name">
+                </div>
+
+                <h3 class="font-semibold px-5 pt-3 lg:px-12">Email</h3>
+                <div class="flex mx-5 my-3 border-[1px] rounded lg:mx-12">
+                    <div class="w-[7%] flex justify-center">
+                        <img src="./img/Register/Profile.svg" alt="" class="w-5 pl-2">
+                    </div>
+                    <input type="text" class="w-[93%] py-1 pl-2" placeholder="Enter Your Email">
+                </div>
+
+                <h3 class="font-semibold px-5 pt-3 lg:px-12">Password</h3>
+                <div class="flex mx-5 my-3 justify-center items-center border-[1px] rounded lg:mx-12">
+                    <div class="w-[7%] flex justify-center">
+                        <img src="./img/Register/Profile.svg" alt="" class="w-5 pl-2">
+                    </div>
+                    <input type="text" class="w-[93%] py-1 pl-2" placeholder="Enter Your Password">
+                    <div class="px-3 flex justify-center">
+                        <ion-icon name="eye-off-outline" class=""></ion-icon>
+                    </div>
+                </div>
+
+                <h3 class="font-semibold px-5 pt-3 lg:px-12">Confirm Password</h3>
+                <div class="flex mx-5 my-3 border-[1px] rounded lg:mx-12">
+                    <div class="w-[7%] flex justify-center">
+                        <img src="./img/Register/Profile.svg" alt="" class="w-5 pl-2">
+                    </div>
+                    <input type="text" class="w-[93%] py-1 pl-2" placeholder="Enter Your Password Again">
+                    <div class="px-3 flex justify-center items-center">
+                        <ion-icon name="eye-off-outline" class=""></ion-icon>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <button class="ml-5 mr-3 w-[90%] bg-primary py-2 rounded mt-3 lg:mx-12">Register</button>
+                </div>
+
+                <div class="flex justify-center items-center mt-5">
+                    <h1 class="text-gray-500 text-[13px]">Have An Account? <span class="text-primary">Login</span></h1>
+                </div>
+
+                <div class="flex justify-center mt-4">
+                    <h1 class="text-gray-500 text-[13px]">Or</h1>
+                </div>
+
+                <div class="flex justify-center items-center gap-5 mb-16 mt-8 mx-5">
+                    <a href="#" class="flex justify-center items-center gap-5 px-4 py-3 rounded shadow-md lg:w-[46%]">
+                        <ion-icon name="logo-google" class="w-5 h-5 object-contain"></ion-icon>
+                        <h1 class="hidden lg:block">Google</h1>
+                    </a>
+                    <a href="#" class="flex justify-center items-center gap-5 px-4 py-3 rounded shadow-md lg:w-[46%]">
+                        <ion-icon name="logo-facebook" class="w-5 h-5 object-contain"></ion-icon>
+                        <h1 class="hidden lg:block">Facebook</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

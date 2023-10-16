@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF8906'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="border-b-[1px]">
+        <div class="flex justify-between items-center my-3 mx-3 lg:mx-10">
+            <img src="./img/Frame 27.png" alt="logo" class="h-25 w-25 object-contain lg:h-8 ">
+            <div class="flex items-center gap-5 lg:mr-5 mr-0">
+                <a href="#search">
+                    <ion-icon name="search-outline" class="text-xl"></ion-icon>
+                </a>
+                <a href="#cart">
+                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                </a>
+                <img src="./img/profile.jpg" alt="profile" class="w-10 h-10 object-cover rounded-full">
+                <a href="#">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="">
+        <div class="flex">
+            <div class="w-[20%] pl-7 pr-5 my-6 h-screen border-r-[1px] hidden lg:block">
+                <a href="#" class="flex items-center py-2 my-2 px-3 hover:bg-slate-400 rounded">
+                    <img src="./img/Vector.svg" alt="dashboard" class="w-6 h-6 object-contain mr-3">
+                    <h1 class="text-[#4F5665]">Dashboard</h1>
+                </a>
+                <a href="#" class="flex items-center py-2 my-2 px-3 hover:bg-slate-400 rounded">
+                    <img src="./img/u_glass-tea.svg" alt="product" class="w-6 h-6 object-contain mr-3">
+                    <h1 class="text-[#4F5665]">Product</h1>
+                </a>
+                <a href="#" class="flex items-center py-2 my-2 px-3 hover:bg-slate-400 rounded">
+                    <img src="./img/Bag.svg" alt="" class="w-6 h-6 object-contain mr-3">
+                    <h1 class="text-[#4F5665]">Order</h1>
+                </a>
+                <a href="#" class="flex bg-primary py-2 my-2 px-3 rounded hover:bg-orange-400">
+                    <img src="./img/2 User.svg" alt="" class="w-6 h-6 object-contain mr-3">
+                    <h1 class="">User</h1>
+                </a>
+                <a href="#" class="flex items-center py-2 my-2 px-3 hover:bg-slate-400 rounded">
+                    <img src="./img/Log Out.svg" alt="" class="w-6 h-6 object-contain mr-3">
+                    <h1 class="text-[#4F5665]">Keluar</h1>
+                </a>
+            </div>
+            <div class="w-full lg:w-[80%]">
+                <div>
+                    <h1 class="font-semibold mt-5 ml-3 lg:ml-8 text-[14px] lg:text-xl">User List</h1>
+                    <div class="lg:flex lg:justify-between">
+                        <a href="#" class="hidden lg:flex items-center gap-1 text-xs bg-primary my-4 mx-8 px-3 rounded">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <h1>Add User</h1>
+                        </a>
+                        <div class="lg:mr-16">
+                            <h5 class="text-xs mb-2 hidden lg:block ml-3">Search User</h5>
+                            <div class="flex items-center justify-between">
+                                <div class="border-[1px] flex justify-between items-center rounded lg:w-96 ml-3 w-[100%]">
+                                    <input type="text" placeholder="Enter User Name" class="px-2 py-2 rounded lg:w-96 w-[95%]">
+                                    <ion-icon name="search-outline" class="text-xl px-3 w-[5%]"></ion-icon>
+                                </div>
+                                <div class="bg-primary lg:py-2 lg:px-2 ml-2 py-3 px-3 rounded">
+                                    <button class="flex items-center">
+                                        <img src="./img/Filter 3.svg" alt="">
+                                        <h5 class="hidden lg:block">Filter</h5>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <a href="#" class="lg:hidden flex items-center justify-center bg-primary text-xs gap-1 ml-3 mt-2 py-2 rounded ">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <h1>Add User</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-[1px] my-3 lg:my-10 ml-3 lg:ml-8 lg:mr-16 mr-3 rounded w-full">
+                    <table class="w-full lg:mr-10">
+                        <tr class="border-b-[1px]">
+                            <th class="lg:px-5 lg:pb-5 lg:pt-8 px-1 py-0">
+                                <input type="checkbox" class="">
+                            </th>
+                            <th class="lg:text-[14px] font-normal lg:px-5 lg:pb-5 lg:pt-8 text-xs hidden lg:block">Image</th>
+                            <th class="lg:text-[14px] font-normal py-3 px-3 lg:px-5 lg:pb-5 lg:pt-8 text-xs">Full Name</th>
+                            <th class="lg:text-[14px] font-normal py-3 px-3 lg:px-5 lg:pb-5 lg:pt-8 text-xs">Phone</th>
+                            <th class="lg:text-[14px] font-normal py-3 px-3 lg:px-5 lg:pb-5 lg:pt-8 text-xs">Address</th>
+                            <th class="lg:text-[14px] font-normal py-3 px-3 lg:px-5 lg:pb-5 lg:pt-8 text-xs">Email</th>
+                            <th class="lg:text-[14px] font-normal py-3 px-3 lg:px-5 lg:pb-5 lg:pt-8 text-xs">Action</th>
+                        </tr>
+                        <tr class="border-b-[1px] bg-[#F9FAFB]">
+                            <td class="text-center lg:text-[14px] lg:py-3 px-0 py-0">
+                                <input type="checkbox">
+                            </td>
+                            <td class="hidden lg:flex justify-center lg:text-[14px] lg:py-3">
+                                <img src="./img/profile.jpg" alt="pp" class="w-12 h-12 object-cover rounded">
+                            </td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Adi Sucipto</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">+6289629153475</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Bandar Lampung</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">suciptoadi550@gmail.com</td>
+                            <td class="">
+                                <div class="flex justify-center items-center">
+                                    <a href="#">
+                                        <img src="./img/Group 1708.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1707.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1706.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b-[1px] bg-[#F9FAFB]">
+                            <td class="text-center lg:text-[14px] lg:py-3 px-0 py-0">
+                                <input type="checkbox">
+                            </td>
+                            <td class="hidden lg:flex justify-center lg:text-[14px] lg:py-3">
+                                <img src="./img/profile.jpg" alt="pp" class="w-12 h-12 object-cover rounded">
+                            </td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Adi Sucipto</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">+6289629153475</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Bandar Lampung</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">suciptoadi550@gmail.com</td>
+                            <td class="">
+                                <div class="flex justify-center items-center">
+                                    <a href="#">
+                                        <img src="./img/Group 1708.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1707.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1706.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b-[1px] bg-[#F9FAFB]">
+                            <td class="text-center lg:text-[14px] lg:py-3 px-0 py-0">
+                                <input type="checkbox">
+                            </td>
+                            <td class="hidden lg:flex justify-center lg:text-[14px] lg:py-3">
+                                <img src="./img/profile.jpg" alt="pp" class="w-12 h-12 object-cover rounded">
+                            </td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Adi Sucipto</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">+6289629153475</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Bandar Lampung</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">suciptoadi550@gmail.com</td>
+                            <td class="">
+                                <div class="flex justify-center items-center">
+                                    <a href="#">
+                                        <img src="./img/Group 1708.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1707.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1706.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b-[1px] bg-[#F9FAFB]">
+                            <td class="text-center lg:text-[14px] lg:py-3 px-0 py-0">
+                                <input type="checkbox">
+                            </td>
+                            <td class="hidden lg:flex justify-center lg:text-[14px] lg:py-3">
+                                <img src="./img/profile.jpg" alt="pp" class="w-12 h-12 object-cover rounded">
+                            </td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Adi Sucipto</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">+6289629153475</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Bandar Lampung</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">suciptoadi550@gmail.com</td>
+                            <td class="">
+                                <div class="flex justify-center items-center">
+                                    <a href="#">
+                                        <img src="./img/Group 1708.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1707.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1706.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b-[1px] bg-[#F9FAFB]">
+                            <td class="text-center lg:text-[14px] lg:py-3 px-0 py-0">
+                                <input type="checkbox">
+                            </td>
+                            <td class="hidden lg:flex justify-center lg:text-[14px] lg:py-3">
+                                <img src="./img/profile.jpg" alt="pp" class="w-12 h-12 object-cover rounded">
+                            </td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Adi Sucipto</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">+6289629153475</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">Bandar Lampung</td>
+                            <td class="text-center lg:text-[14px] py-3 px-3 lg:py-3 text-xs">suciptoadi550@gmail.com</td>
+                            <td class="">
+                                <div class="flex justify-center items-center">
+                                    <a href="#">
+                                        <img src="./img/Group 1708.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1707.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                    <a href="#">
+                                        <img src="./img/Group 1706.svg" alt="" class="lg:w-5 lg:h-5 w-3 h-3 object-cover mx-1">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="flex justify-between">
+                        <h1 class="text-xs ml-1 lg:ml-3 my-3 hidden lg:block">Show 5 user of 100 user</h1>
+                        <div class="flex gap-2 lg:gap-5">
+                            <a href="#" class="text-xs ml-3 my-3">Prev</a>
+                            <a href="#" class="text-xs ml-3 my-3 text-primary">1</a>
+                            <a href="#" class="text-xs ml-3 my-3 ">2</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">3</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">4</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">5</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">6</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">7</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">8</a>
+                            <a href="#" class="text-xs ml-3 my-3 hidden lg:block">9</a>
+                            <a href="#" class="text-xs ml-3 my-3 mr-3 font-semibold">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
